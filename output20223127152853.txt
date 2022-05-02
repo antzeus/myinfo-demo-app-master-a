@@ -1,0 +1,22 @@
+2022-03-27 15:28:53 | index.js
+###################
+SETUP CONFIGURATION
+###################
+Public Cert : ./ssl/staging_myinfo_public_cert.cer
+Private Key : ./ssl/stg-swgsolution-client-privatekey.pem
+Client ID : STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN
+Client Secret : HjXxk6KgCm0Uupj5zl8jEKvPQNCMMx4r
+Redirect URL : http://localhost:3001/callback
+Auth Level : L2
+Auth API URL : https://test.api.myinfo.gov.sg/com/v3/authorise
+Token API URL : https://test.api.myinfo.gov.sg/com/v3/token
+Person API URL : https://test.api.myinfo.gov.sg/com/v3/person
+Attributes : uinfin,name,sex,race,nationality,dob,email,mobileno,regadd,marital,noa-basic,residentialstatus,occupation
+2022-03-27 15:29:8 | === GET home page === 
+  F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\views\html\index.html
+2022-03-27 15:29:17 | === CALLBACK page === 
+2022-03-27 15:29:17 |  directs back to F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\views\html\index.html
+2022-03-27 15:29:18 | === Executing getPersonData ===
+2022-03-27 15:29:18 | Request Body Code : afa3130aa4908d1b515a0c6d26c1b9a991da9283
+2022-03-27 15:29:18 | calling createTokenRequest... 
+2022-03-27 15:29:18 | === Executing createTokenRequest ===

@@ -1,0 +1,91 @@
+2022-03-28 12:39:13 | index.js
+###################
+SETUP CONFIGURATION
+###################
+Public Cert : ./ssl/staging_myinfo_public_cert.cer
+Private Key : ./ssl/stg-swgsolution-client-privatekey.pem
+Client ID : STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN
+Client Secret : HjXxk6KgCm0Uupj5zl8jEKvPQNCMMx4r
+Redirect URL : http://localhost:3001/callback
+Auth Level : L2
+Auth API URL : https://test.api.myinfo.gov.sg/com/v3/authorise
+Token API URL : https://test.api.myinfo.gov.sg/com/v3/token
+Person API URL : https://test.api.myinfo.gov.sg/com/v3/person
+Attributes : uinfin,name,sex,race,nationality,dob,email,mobileno,regadd,marital,noa-basic,residentialstatus,occupation
+2022-03-28 12:39:17 | === GET home page === 
+  F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-xxx\myinfo-demo-app-master\views\html\index.html
+2022-03-28 12:39:28 | === CALLBACK page === 
+2022-03-28 12:39:28 |  directs back to F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-xxx\myinfo-demo-app-master\views\html\index.html
+2022-03-28 12:39:28 | === Executing getPersonData ===
+2022-03-28 12:39:28 | Request Body Code : 518ffc28a0d75e51504d4b290acf71eedb99bde6
+2022-03-28 12:39:28 | calling createTokenRequest... 
+2022-03-28 12:39:28 | === Executing createTokenRequest ===
+2022-03-28 12:39:28 | Request Header for Token API:
+{"Accept":"application/json","Content-Type":"application/x-www-form-urlencoded","Cache-Control":"no-cache","Authorization":"PKI_SIGN app_id=\"STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN\",nonce=\"165112076866400\",signature_method=\"RS256\",signature=\"undefined\",timestamp=\"1651120768664\""}
+2022-03-28 12:39:28 | calling --> restClient.post(https://test.api.myinfo.gov.sg/com/v3/token)
+2022-03-28 12:39:28 | Set headers
+2022-03-28 12:39:28 | calling --> request.set(headers)
+[Object: null prototype] {
+  Accept: 'application/json',
+  'Content-Type': 'application/x-www-form-urlencoded',
+  'Cache-Control': 'no-cache',
+  Authorization: 'PKI_SIGN app_id="STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN",nonce="165112076866400",signature_method="RS256",signature="undefined",timestamp="1651120768664"'
+}
+2022-03-28 12:39:28 | Set Params
+2022-03-28 12:39:28 | calling --> request.send(params)
+[Object: null prototype] {
+  grant_type: 'authorization_code',
+  code: '518ffc28a0d75e51504d4b290acf71eedb99bde6',
+  redirect_uri: 'http://localhost:3001/callback',
+  client_id: 'STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN',
+  client_secret: 'HjXxk6KgCm0Uupj5zl8jEKvPQNCMMx4r'
+}
+2022-03-28 12:39:28 | return request:
+Request {
+  _events: [Object: null prototype] {
+    end: [Function: bound onceWrapper] {
+      listener: [Function: bound _clearTimeout]
+    }
+  },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  _agent: false,
+  _formData: null,
+  method: 'POST',
+  url: 'https://test.api.myinfo.gov.sg/com/v3/token',
+  _header: {
+    'user-agent': 'node-superagent/3.8.3',
+    accept: 'application/json',
+    'content-type': 'application/x-www-form-urlencoded',
+    'cache-control': 'no-cache',
+    authorization: 'PKI_SIGN app_id="STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN",nonce="165112076866400",signature_method="RS256",signature="undefined",timestamp="1651120768664"'
+  },
+  header: {
+    'User-Agent': 'node-superagent/3.8.3',
+    Accept: 'application/json',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Cache-Control': 'no-cache',
+    Authorization: 'PKI_SIGN app_id="STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN",nonce="165112076866400",signature_method="RS256",signature="undefined",timestamp="1651120768664"'
+  },
+  writable: true,
+  _redirects: 0,
+  _maxRedirects: 5,
+  cookies: '',
+  qs: {},
+  _query: [],
+  qsRaw: [],
+  _redirectList: [],
+  _streamRequest: false,
+  _data: {
+    grant_type: 'authorization_code',
+    code: '518ffc28a0d75e51504d4b290acf71eedb99bde6',
+    redirect_uri: 'http://localhost:3001/callback',
+    client_id: 'STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN',
+    client_secret: 'HjXxk6KgCm0Uupj5zl8jEKvPQNCMMx4r'
+  },
+  [Symbol(kCapture)]: false
+}
+2022-03-28 12:39:28 | Finish Get Person Data
+2022-03-28 12:39:29Error in CALL TOKEN API :  401
+2022-03-28 12:39:29{"code":401,"message":"Invalid PKI signature"}
+2022-03-28 12:39:29 | Finish Create Token Request

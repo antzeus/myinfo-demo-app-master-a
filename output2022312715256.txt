@@ -1,0 +1,50 @@
+2022-03-27 15:25:6 | index.js
+###################
+SETUP CONFIGURATION
+###################
+Public Cert : ./ssl/staging_myinfo_public_cert.cer
+Private Key : ./ssl/stg-swgsolution-client-privatekey.pem
+Client ID : STG-202000046E-ISOLUTIONS-VEHICLELOANAPPLN
+Client Secret : HjXxk6KgCm0Uupj5zl8jEKvPQNCMMx4r
+Redirect URL : http://localhost:3001/callback
+Auth Level : L2
+Auth API URL : https://test.api.myinfo.gov.sg/com/v3/authorise
+Token API URL : https://test.api.myinfo.gov.sg/com/v3/token
+Person API URL : https://test.api.myinfo.gov.sg/com/v3/person
+Attributes : uinfin,name,sex,race,nationality,dob,email,mobileno,regadd,marital,noa-basic,residentialstatus,occupation
+2022-03-27 15:25:16 | === GET home page === 
+  F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\views\html\index.html
+2022-03-27 15:25:29 | === CALLBACK page === 
+2022-03-27 15:25:29 |  directs back to F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\views\html\index.html
+2022-03-27 15:25:29 | === Executing getPersonData ===
+2022-03-27 15:25:29 | Request Body Code : a86c862365df930cbe8cc72e41807228abf1bac4
+2022-03-27 15:25:29 | calling createTokenRequest... 
+2022-03-27 15:25:29 | === Executing createTokenRequest ===
+Error: error:25078067:DSO support routines:win32_load:could not load the shared library
+    at Sign.sign (node:internal/crypto/sig:131:29)
+    at generateSHA256withRSAHeader (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\lib\security\security.js:101:6)
+    at Object.security.generateAuthorizationHeader (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\lib\security\security.js:140:12)
+    at createTokenRequest (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\routes\index.js:305:34)
+    at F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\routes\index.js:108:13
+    at Layer.handle [as handle_request] (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\index.js:341:12)
+    at next (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\index.js:174:3)
+    at router (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project\99-HP_WebApp\00-MyInfo\myinfo-demo-app-master-ORIG\myinfo-demo-app-master\node_modules\express\lib\router\index.js:323:13) {
+  opensslErrorStack: [
+    'error:0E076071:configuration file routines:module_run:unknown module name',
+    'error:0E07506E:configuration file routines:module_load_dso:error loading dso',
+    'error:25070067:DSO support routines:DSO_load:could not load the shared library'
+  ],
+  library: 'DSO support routines',
+  function: 'win32_load',
+  reason: 'could not load the shared library',
+  code: 'ERR_OSSL_DSO_COULD_NOT_LOAD_THE_SHARED_LIBRARY'
+}
+2022-03-27 15:25:29 | Finish Get Person Data
